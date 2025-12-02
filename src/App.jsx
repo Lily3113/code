@@ -163,20 +163,45 @@ const Footer = () => (
 
 const CTABanner = () => (
     <section className="max-w-7xl mx-auto px-6 mb-24">
-      <div className="bg-[#0e1c36] rounded-sm p-12 md:p-16 relative overflow-hidden flex flex-col md:flex-row items-center">
-         {/* Geometric Background Overlay */}
-         <div className="absolute right-0 top-0 h-full w-1/2 opacity-10 pointer-events-none hidden md:block">
-             <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-bl-full"></div>
-             <div className="absolute bottom-0 right-0 w-64 h-64 bg-white opacity-50"></div>
-             <div className="absolute bottom-0 right-64 w-64 h-64 bg-white rounded-tr-full opacity-50"></div>
-             <div className="absolute top-12 right-72 w-32 h-32 rounded-full border-4 border-white opacity-30"></div>
-         </div>
+      <div className="w-full bg-[#062042] rounded-3xl text-white p-10 md:p-16 flex flex-col md:flex-row items-center justify-between">
+        
+        {/* LEFT SIDE */}
+        <div className="max-w-xl">
+          <p className="text-[#F3A83B] font-medium mb-4">
+            Why Choose Prelusive Digital Marketing
+          </p>
 
-         <div className="relative z-10 md:w-2/3 text-left">
-             <span className="text-[#fca311] text-xs md:text-sm font-bold uppercase tracking-wider mb-3 block">Why Choose Prelusive Digital Marketing</span>
-             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">Smarter Marketing. <br/>Proven Results.</h2>
-             <Button variant="accent">Book Consultancy</Button>
-         </div>
+          <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-6">
+            Smarter Marketing.<br />
+            Proven Results.
+          </h1>
+
+          <button className="bg-[#F3A83B] text-black font-medium px-6 py-3 rounded-md">
+            Book Consultancy
+          </button>
+        </div>
+
+        {/* RIGHT GEOMETRIC SHAPES */}
+        <div className="mt-10 md:mt-0 grid grid-cols-3 grid-rows-3 gap-0 w-[320px] h-[320px] opacity-50">
+
+          {/* LEFT HALF CIRCLE */}
+          <div className="bg-[#2C4160] rounded-l-full"></div>
+
+          {/* TOP LARGE SQUARE */}
+          <div className="bg-[#3B4F68] col-span-2 row-span-2"></div>
+
+          {/* TOP RIGHT CIRCLE */}
+          <div className="bg-[#2C4160] rounded-full"></div>
+
+          {/* LEFT CIRCLE */}
+          <div className="bg-[#2C4160] rounded-full"></div>
+
+          {/* BOTTOM RIGHT TRIANGLE */}
+          <div className="border-b-[160px] border-b-[#2C4160] 
+                          border-l-[160px] border-l-transparent 
+                          w-0 h-0 col-span-2 justify-self-end"></div>
+        </div>
+
       </div>
     </section>
 );
@@ -198,7 +223,7 @@ const HomePage = () => (
       </div>
       <div className="relative mt-0 md:-mt-24 lg:-mt-28">
         <div className="relative z-10 rounded-sm overflow-hidden shadow-xl">
-          <img src="1.png" alt="Digital Marketing Hero" className="w-full h-auto object-cover" />
+          <img src="1.png" alt="Digital Marketing Hero" className="w-full h-auto max-w-4xl mx-auto object-contain" />
         </div>
       </div>
     </section>
@@ -218,11 +243,11 @@ const HomePage = () => (
 
           {/* Decorative image below the button as requested (14.png) */}
           <div className="mt-6 w-full max-w-sm mx-auto md:mx-0">
-            <img src="14.png" alt="Decoration 14" width="560" height="360" className="w-full h-auto object-cover rounded-sm shadow-md" />
+            <img src="14.png" alt="Decoration 14" className="w-full h-auto max-w-md object-contain rounded-sm shadow-md" />
           </div>
         </div>
            <div className="relative order-2 md:order-2">
-             <img src="15.png" alt="Empowering Brands" className="w-full h-auto object-cover rounded-sm shadow-xl" />
+             <img src="15.png" alt="Empowering Brands" className="w-full h-auto max-w-2xl object-contain rounded-sm shadow-xl" />
         </div>
       </div>
     </section>
@@ -273,7 +298,7 @@ const HomePage = () => (
           <Button variant="primary">Learn More</Button>
         </div>
         <div className="relative">
-             <img src="3.png" alt="Smarter Marketing" className="w-full h-auto object-cover rounded-sm shadow-xl" />
+             <img src="3.png" alt="Smarter Marketing" className="w-full h-auto max-w-2xl object-contain rounded-sm shadow-xl" />
         </div>
       </div>
     </section>
@@ -293,7 +318,7 @@ const AboutPage = () => (
     </div>
     
     <div className="max-w-7xl mx-auto px-6 mb-24">
-        <img src="4.png" alt="Team Meeting" className="w-full h-[450px] object-cover rounded-sm shadow-sm" />
+        <img src="4.png" alt="Team Meeting" className="w-full h-auto max-w-4xl mx-auto object-contain rounded-sm shadow-sm" />
     </div>
 
     {/* Who We Are - Image Left, Text Right */}
