@@ -186,16 +186,17 @@ const CTABanner = () => (
 const HomePage = () => (
   <div className="animate-fade-in">
     {/* Section 1: Hero - Text Centered, Image Below (Matching Digital Markerting landing page (1).jpg), there should be a shooting star just like the design and remove the white space on the background of the images, there is too much space left from the image and text */}
-    <section className="max-w-7xl mx-auto px-6 py-12 md:py-20 text-center">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-[#0e1c36] leading-[1.1] mb-6">
-          Amplifying Your Brand in the Digital World
+    <section className="max-w-7xl mx-auto px-4 py-4 md:py-6 text-center">
+      <div className="max-w-xl mx-auto">
+        <h1 className="text-2xl md:text-5xl font-extrabold text-[#0e1c36] leading-[1.02] mb-0">
+          <span className="block whitespace-nowrap">Amplifying Your Brand</span>
+          <span className="block">in the Digital World</span>
         </h1>
-        <p className="text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
+        <p className="text-gray-500 mt-2 mb-4 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
           We craft innovative digital marketing strategies that help businesses in Zimbabwe and beyond stand out, grow, and connect with their audience — no matter their starting point.
         </p>
       </div>
-      <div className="relative mt-8">
+      <div className="relative mt-0 md:-mt-24 lg:-mt-28">
         <div className="relative z-10 rounded-sm overflow-hidden shadow-xl">
           <img src="1.png" alt="Digital Marketing Hero" className="w-full h-auto object-cover" />
         </div>
@@ -214,9 +215,14 @@ const HomePage = () => (
             At Prelusive Digital Marketing, our mission is to revolutionize the digital landscape for businesses in Zimbabwe and beyond. We exist to help brands stand out in competitive markets — no matter their budget or starting point. Our mission is to craft strategies that not only enhance online visibility but also tell each brand's unique story and drive measurable, sustainable growth.
           </p>
           <Button variant="primary">Learn More</Button>
+
+          {/* Decorative image below the button as requested (14.png) */}
+          <div className="mt-6 w-full max-w-sm mx-auto md:mx-0">
+            <img src="14.png" alt="Decoration 14" width="560" height="360" className="w-full h-auto object-cover rounded-sm shadow-md" />
+          </div>
         </div>
-        <div className="relative order-2 md:order-2">
-             <img src="2.png" alt="Empowering Brands" className="w-full h-auto object-cover rounded-sm shadow-xl" />
+           <div className="relative order-2 md:order-2">
+             <img src="15.png" alt="Empowering Brands" className="w-full h-auto object-cover rounded-sm shadow-xl" />
         </div>
       </div>
     </section>
@@ -224,13 +230,21 @@ const HomePage = () => (
     {/* Section 3: Services Grid */}
     <section className="py-20 max-w-7xl mx-auto px-6">
       {/* Header remains left-aligned */}
-      <SectionHeader 
-        subtitle="Services"
-        title="Services & Benefits of Working With Us"
-        centered={false} 
-      />
+      <div className="md:flex md:items-center md:justify-between md:gap-8 mb-6">
+        <div className="md:flex-1">
+          <SectionHeader 
+            subtitle="Services"
+            title="Services & Benefits of Working With Us"
+            centered={false} 
+          />
+        </div>
+
+        <div className="md:w-1/2 text-gray-600 text-sm md:text-base leading-relaxed hidden md:block md:mt-3 lg:mt-4">
+          At Prelusive Digital Marketing, we provide a full suite of services designed to help businesses grow online. From strategy to execution, we craft custom solutions that deliver measurable results.
+        </div>
+      </div>
       {/* Use a 2-column grid with a gap for visual separation */}
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {SERVICES_DATA.map((service, idx) => (
           <div 
             key={idx} 
@@ -286,7 +300,7 @@ const AboutPage = () => (
     <section className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-16 items-start">
       {/* the image is too small now its not covering the space */}
        <div className="relative">
-           <img src="5.png" alt="Who we are" className="w-full h-auto object-cover rounded-sm" />
+           <img src="16.png" alt="Who we are" className="w-full h-auto object-cover rounded-sm" />
            <StatCard number="100+" label="Clients" className="top-10 left-0 shadow-lg" />
            <StatCard number="10" label="Team Members" className="bottom-10 right-0 shadow-lg" />
        </div>
@@ -323,7 +337,7 @@ const AboutPage = () => (
     {/* Vision - Image Left, Text Right */}
     <section className="py-20 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div className="relative">
-            <img src="7.png" alt="Call Center" className="w-full h-auto object-cover rounded-sm" />
+            <img src="17.png" alt="Call Center" className="w-full h-auto object-cover rounded-sm" />
             <StatCard number="1000+" label="Lives Changed" className="bottom-8 right-8" />
        {/* the image is small that it cant fit the container  */}
         </div>
@@ -356,7 +370,7 @@ const ServicesPage = () => (
       </div>
 
       {/* Building Brands - Text Left, Image Right */}
-      <section className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-16 items-center">
+      <section className="max-w-7xl mx-auto px-6 pt-24 pb-16 pl-8 md:pl-12 grid md:grid-cols-2 gap-16 items-center">
           <div>
               <SectionHeader subtitle="Services" title="Building Brands That Stand Out" />
               <p className="text-gray-600 mb-6 text-sm leading-relaxed">
@@ -368,7 +382,7 @@ const ServicesPage = () => (
               <Button variant="primary">Inquire More</Button>
           </div>
           <div className="relative">
-              <img src="11.png" alt="Building Brands" className="w-full h-auto object-cover rounded-sm shadow-lg" />
+              <img src="16.png" alt="Building Brands" className="w-full h-auto object-cover rounded-sm shadow-lg" />
               
               <div className="absolute top-4 left-4 bg-white p-3 shadow-md flex items-center gap-2 rounded-sm">
                  <div className="flex -space-x-2">
@@ -419,7 +433,8 @@ const ServicesPage = () => (
       </section>
 
       {/* Bottom Image Strip */}
-      <div className="w-full h-80 relative overflow-hidden"> 
+      
+      <div className="w-full h-80 relative overflow-hidden mt-8 mb-16 px-9"> 
          {/* the size of the image there should be breathing space from right to left and with the footer */}
           <img src="12.png" alt="Footer Strip" className="w-full h-full object-cover object-center" />
       </div>
@@ -464,7 +479,7 @@ const ContactPage = () => (
             </p>
          </div>
 
-         <div className="max-w-7xl mx-auto px-6 mb-20">
+         <div className="max-w-3xl mx-auto px-6 mb-20">
              <img src="13.png" alt="Contact Hero" className="w-full h-[350px] object-cover rounded-sm shadow-sm" />
          </div>
 
