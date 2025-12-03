@@ -139,8 +139,8 @@ const Footer = () => (
     </div>
 
     <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-gray-400">
-        <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-            <img src="PRELUSIVE Logo final (5).png" alt="Logo" className="w-12" />
+        <div className="flex items-center justify-center">
+            <img src="PRELUSIVE Logo final (5).png" alt="Logo" className="w-8 h-8 object-contain" />
         </div>
         
         <div className="flex gap-8">
@@ -212,11 +212,18 @@ const HomePage = () => (
   <div className="animate-fade-in">
     {/* Section 1: Hero - Text Centered, Image Below (Matching Digital Markerting landing page (1).jpg), there should be a shooting star just like the design and remove the white space on the background of the images, there is too much space left from the image and text */}
     <section className="max-w-7xl mx-auto px-4 py-4 md:py-6 text-center">
-      <div className="max-w-xl mx-auto">
-        <h1 className="text-2xl md:text-5xl font-extrabold text-[#0e1c36] leading-[1.02] mb-0">
-          <span className="block whitespace-nowrap">Amplifying Your Brand</span>
-          <span className="block">in the Digital World</span>
-        </h1>
+      <div className="max-w-xl mx-auto relative">
+        <div className="flex items-start justify-center relative">
+          {/* Star icon positioned to the left of the headline */}
+          <div className="absolute -left-12 md:-left-16 top-4 md:top-6">
+            <img src="20.png" alt="Star Icon" className="w-6 h-6 md:w-8 md:h-8 opacity-60" />
+          </div>
+          
+          <h1 className="text-2xl md:text-5xl font-extrabold text-[#0e1c36] leading-[1.02] mb-0">
+            <span className="block whitespace-nowrap">Amplifying Your Brand</span>
+            <span className="block">in the Digital World</span>
+          </h1>
+        </div>
         <p className="text-gray-500 mt-2 mb-4 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
           We craft innovative digital marketing strategies that help businesses in Zimbabwe and beyond stand out, grow, and connect with their audience — no matter their starting point.
         </p>
@@ -274,10 +281,14 @@ const HomePage = () => (
           <div 
             key={idx} 
             // Use subtle shadow and clean styling for the distinct block look
-            className={`bg-white p-6 md:p-8 rounded-sm shadow-md transition-all duration-300 hover:shadow-lg`}
+            className={`bg-white p-6 md:p-8 rounded-sm shadow-md transition-all duration-300 hover:shadow-lg relative`}
           >
+            {/* Icon in top left corner */}
+            <div className="absolute top-4 left-4">
+              <img src="21.png" alt="Service Icon" className="w-8 h-8 object-contain" />
+            </div>
             {/* Title font size matched to be similar to header titles in the image */}
-            <h3 className="text-lg font-bold text-[#0e1c36] mb-2">{service.title}</h3>
+            <h3 className="text-lg font-bold text-[#0e1c36] mb-2 mt-8">{service.title}</h3>
             <p className="text-gray-500 text-sm leading-relaxed">{service.desc}</p>
           </div>
         ))}
